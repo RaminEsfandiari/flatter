@@ -7,25 +7,10 @@
  * @package Flatter
  */
 get_header(); ?>
-	<section class="page-header" style="background:#404040 url( <?php if ( get_header_image() ) { header_image(); }  ?>)">	
-	    <div class="container">
-	        <div class="row">
-	            <div class="col-sm-12">
-	                <div class="block">
-	                    <?php
-							the_archive_title( '<h1 class="page-title">', '</h1>' );
-							the_archive_description( '<div class="taxonomy-description">', '</div>' );
-						?>
-	                    <div class="underline"></div>
-	                    <?php flatter_breadcrumbs(); ?>
-	                </div>
-	            </div>
-	        </div>
-	    </div>
-	</section>
+
 
 	<section class="inner-content">
-    	<div class="container">
+    	<div class="container-fluid">
         	<div class="row">
 
         		<?php

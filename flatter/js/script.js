@@ -60,15 +60,15 @@ jQuery(function($) { // DOM is now read and ready to be manipulated
   });
 
 
-//Sticky Header
-  $(window).scroll(function() {
-    if ($(this).scrollTop() > 1){
-      $('.logo-menu').addClass("sticky-menu");
-    }
-    else{
-      $('.logo-menu').removeClass("sticky-menu");
-    }
-  });
+// //Sticky Header
+//   $(window).scroll(function() {
+//     if ($(this).scrollTop() > 1){
+//       $('.logo-menu').addClass("sticky-menu");
+//     }
+//     else{
+//       $('.logo-menu').removeClass("sticky-menu");
+//     }
+//   });
 
 // Fixing Container Width
   var mq = window.matchMedia( "(min-width: 1367px)" );

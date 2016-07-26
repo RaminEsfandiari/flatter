@@ -11,8 +11,8 @@ get_header(); ?>
 
 
 
-		<section class="page-header" style="background:#404040 url( <?php if ( get_header_image() ) { header_image(); }  ?>)">
-		
+		<!-- <section class="page-header" style="background:#404040 url( <?php if ( get_header_image() ) { header_image(); }  ?>)">
+
 	    <div class="container">
 	        <div class="row">
 	            <div class="col-sm-12">
@@ -24,7 +24,7 @@ get_header(); ?>
 	            </div>
 	        </div>
 	    </div>
-	</section>
+	</section> -->
 
 	<section class="inner-content">
     	<div class="container">
@@ -35,10 +35,10 @@ get_header(); ?>
 					 if($sidebar != 'both'){
 							$class = 'col-md-9';
 					}
-				?>          
-					
+				?>
+
 				<?php
-				    if ($sidebar == 'left' || $sidebar == 'both'){ 
+				    if ($sidebar == 'left' || $sidebar == 'both'){
 				        get_sidebar('left');
 				       }
 				?>
@@ -72,7 +72,7 @@ get_header(); ?>
 					<?php endif; ?>
 				</div>
 				<?php
-				    if ($sidebar == 'right' || $sidebar == 'both'){ 
+				    if ($sidebar == 'right' || $sidebar == 'both'){
 				        get_sidebar('right');
 				       }
 				?>

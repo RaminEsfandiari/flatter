@@ -9,38 +9,14 @@
 
 get_header(); ?>
 
-
-
-<!-- 	<section class="page-header" style="background:#404040 url( <?php if ( get_header_image() ) { header_image(); }  ?>)">
-	
-	    <div class="container">
-	        <div class="row">
-	            <div class="col-sm-12">
-	                <div class="block">
-	                    <h1 class="page-title"><?php the_title(); ?></h1>
-	                    <div class="underline"></div>
-	                    <?php flatter_breadcrumbs(); ?>
-	                </div>
-	            </div>
-	        </div>
-	    </div>
-	</section> -->
-
 	<section class="inner-content">
-    	<div class="container">
-        	<div class="row">  		
-        	</div>
-        </div>		
-	</section>
-
-	<section class="inner-content">
-    	<div class="container">
+    	<div class="container-fluid">
         	<div class="row">
         		<?php
 					$class = 'col-md-6';
 					$sidebar =  get_theme_mod('single_post_sidebar_position',__('right','flatter'));
 					 if($sidebar != 'both'){
-							$class = 'col-md-9';
+							$class = 'col-md-8 left-content';
 					}
 				?>          
 					

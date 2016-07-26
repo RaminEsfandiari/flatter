@@ -14,70 +14,78 @@
 
 get_header(); ?>
 
-<!-- 	<section class="page-header" style="background:#404040 url( <?php if ( get_header_image() ) { header_image(); }  ?>)">	
-	    <div class="container">
-	        <div class="row">
-	            <div class="col-sm-12">
-	                <div class="block">
-	                    <h2 class="page-title" style="color:#<?php echo header_textcolor(); ?>"><?php _e('Welcome to ','flatter'); echo bloginfo('title'); ?></h2>
-	                    <div class="underline"></div>
-	                    <?php flatter_breadcrumbs(); ?>
-	                </div>
-	            </div>
-	        </div>
-	    </div>
-	</section> -->
-
 	<section class="inner-content">
-    	<div class="container">
-        	<div class="row">  		
-        	</div>
-        </div>		
-	</section>
+
+    	<div class="container-fluid">
+        	
+        	<div class="row">
+
+						<div class="col-xs-12 col-md-12 most-popular">
+	      			<h2 id="purpose-header">OUR PURPOSE</h2>
+	      			<h3 id="change-header">to change the framework in which millions of people think about political questions</h3>
+	      		</div> 
+
+					</div>
 
 
+        	<div class="row">
 
-	<section class="inner-content">
-    	<div class="container">
-        	<div class="row">  		
+<!-- change to col-md-9 if you bring back sidebar -->
+        		<div class ="col-xs-12 col-md-12" id="most-recent">
+      				<div class="detail-content">
+								<?php if ( have_posts() ) : ?>
+									<div class="masonry-3">
 
-				<div class="col-md-12 detail-content">
-					<?php if ( have_posts() ) : ?>
-						<div class="masonry-3">
-							<?php if (! is_front_page() ) : ?>
-								<header>
-									<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-								</header>
-							<?php endif; ?>
+										<?php if (! is_front_page() ) : ?>
+											<header>
+												<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+											</header>
+										<?php endif; ?>
 
-						
-							<?php /* Start the Loop */ ?>
-							<?php while ( have_posts() ) : the_post(); ?>
+										<?php /* Start the Loop */ ?>
+										<?php while ( have_posts() ) : the_post(); ?>
 
-								<?php
+											<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
 
-									/*
-									 * Include the Post-Format-specific template for the content.
-									 * If you want to override this in a child theme, then include a file
-									 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-									 */
-									get_template_part( 'template-parts/content', get_post_format() );
+										<?php endwhile; ?>
+									</div>
+
+									<?php flatter_pagination_bars(); ?>
+
+									<?php else : ?>
+
+									<?php get_template_part( 'template-parts/content', 'none' ); ?>
+
+								<?php endif; ?>
+							</div>
+        		</div>
+
+					</div>
+	      	
+	      	<?php /*get_sidebar('right');*/?>		
+
+        	<div class="row">
+
+						<div class="col-xs-12 col-md-12 most-popular">
+	      			<h3 id="popular-header">Popular</h3>
+	      			<?php
+								$posts = wp_most_popular_get_popular( array( 'limit' => 3, 'post_type' => 'post', 'range' => 'all_time' ) );
+								global $post;
+								if ( count( $posts ) > 0 ): foreach ( $posts as $post ):
+								    setup_postdata( $post );
+								    ?>
+								    <div class="col-md-4 most-pop-square"><a href="https://wordpress.org/plugins/wp-most-popular/&" 
+								    	title="<?php echo esc_attr(get_the_title() ? get_the_title() : get_the_ID()); ?>">
+								    	<?php get_template_part( 'template-parts/content', get_post_format() ); ?></a></div>
+								    <?php
+								endforeach; endif;
 								?>
+	      		</div> 
 
-							<?php endwhile; ?>
-						</div>
+					</div>
+	
 
-						<?php flatter_pagination_bars(); ?>
-
-						<?php else : ?>
-
-						<?php get_template_part( 'template-parts/content', 'none' ); ?>
-
-					<?php endif; ?>
-				</div>
-
-				<?php get_sidebar('right');?>
-			</div>
+			
 		</div>
 	</section>
 <?php get_footer(); ?>

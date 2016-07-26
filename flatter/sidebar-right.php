@@ -13,7 +13,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 ?>
 
 
-<div class="col-md-3">
+<div class="col-md-3" id="right-sidebar">
 	<aside class="sidebar">
     	<?php dynamic_sidebar( 'sidebar-1' ); ?>
     </aside> 

@@ -54,11 +54,7 @@
                     </h6>
                 </div>
                 <div class="col-sm-6">
-                    <h6>
-                    <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'flatter' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'flatter' ), 'WordPress' ); ?></a>
-                        <span class="sep"> | </span>
-                        <?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'flatter' ), 'flatter', '<a href="'.esc_url( __( 'http://oceanwebthemes.com', 'flatter' ) ).'" >Ocean Web Themes</a>' ); ?>
-                    </h6>
+
                 </div>
 
                 <div class="col-sm-3">

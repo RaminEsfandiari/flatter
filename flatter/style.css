@@ -13,3 +13,147 @@ Tags:light, white, black, green,translation-ready, custom-background, green,ligh
 
 This theme, like WordPress, is licensed under the GPL.
 */
+
+/* CUSTOM */
+
+body{
+  background-color: #F1F1F1;
+}
+
+/* NAVBAR **************************/
+.img-logo {
+  max-height: 50px;
+  min-height: 50px;
+  min-width:200px;
+}
+.navbar-default {
+  background-color: #FF0000 !important;
+}
+.sm{
+  padding-right: 20px;
+}
+.navbar-collapse {
+  padding-left:20px !important;
+  text-align: center;
+}
+/* NAVBAR END **************************/
+
+/*#header-row {
+  width: 100%;
+}*/
+.navbar-nav{
+  color: #fff
+}
+#menu-item-22 a:hover,
+#menu-item-23 a:hover,
+#menu-item-29 a:hover,
+#menu-item-33 a:hover,
+#menu-item-165 a:hover{
+  color: #000;
+}
+
+.most-popular {
+  padding-bottom: 20px;
+  background-color: #222;
+} 
+#most-recent {
+  padding-bottom: 20px;
+  /*border-bottom: 1px solid red;*/
+} 
+
+.single-post p {
+  font-size: 16px;
+}
+
+/*.left-content {
+	margin-left: 1em;
+	margin-right: 1em;
+}*/
+
+#right-sidebar {
+  border-left: 2px solid red;
+}
+
+#popular-header{
+  font-size: 36px;
+  font-weight: bold;
+  color:#fff;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+.main-menu-col {
+  float: right !important;
+}
+
+.inner-content {
+  padding-top: 50px;
+  background-color: #F1F1F1;
+}
+
+.single-post{
+  background-color: #fff;
+}
+
+.single-post h3{
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.single-post h4{
+  margin-left: 0px;
+  margin-right: 0px;
+  font-size: 28px;
+}
+.single-post h6,
+.single-post p{
+  padding: 10px;
+}
+.single-post .read-more{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.single-post .tag-comment {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.post-title{
+  padding: 10px;
+}
+
+span.EMAIL-label,
+span.FNAME-label,
+span.LNAME-label{
+  color:#aaa;
+  font-weight: normal;
+}
+
+@media all and (max-width: 786px) and (min-width: 320px) {
+  .inner-content {
+/*    padding-top: 1%;
+*/  }
+}
+
+.googlemaps{
+  padding-bottom: 10px;
+}
+
+.right {
+  float: right;
+}
+
+
+#purpose-header{
+  color: #eee;
+  text-align: center;
+}
+#change-header{
+  color: #eee;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+
+/*#right-sidebar{
+  background-color: #fff780;
+  height:100% !important;
+}*/
