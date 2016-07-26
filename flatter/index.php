@@ -74,9 +74,7 @@ get_header(); ?>
 								if ( count( $posts ) > 0 ): foreach ( $posts as $post ):
 								    setup_postdata( $post );
 								    ?>
-								    <div class="col-md-4 most-pop-square"><a href="https://wordpress.org/plugins/wp-most-popular/&" 
-								    	title="<?php echo esc_attr(get_the_title() ? get_the_title() : get_the_ID()); ?>">
-								    	<?php get_template_part( 'template-parts/content', get_post_format() ); ?></a></div>
+								    <div class="col-md-4 most-pop-square"><?php get_template_part( 'template-parts/content', get_post_format() ); ?></div>
 								    <?php
 								endforeach; endif;
 								?>
